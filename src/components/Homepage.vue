@@ -17,6 +17,8 @@ defineProps({
       Generate Prompt
     </button>
 
+    <p>Prompt: </p><p>Prompt goes here</p>
+
     <div>
       <button>
         Sign In
@@ -28,6 +30,8 @@ defineProps({
         Previous
       </button>
     </div>
+
+    <p>Word Count: ??</p>
 
     <form action="/action_page.php">
       <label for="entry">Entry:</label>
