@@ -10,9 +10,30 @@ defineProps({
 <template>
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
-    <h3>
-      You have many years ahead of you!
-    </h3>
+    <h1>
+      Prompts Website Holder
+    </h1>
+    <button>
+      Generate Prompt
+    </button>
+
+    <div>
+      <button>
+        Sign In
+      </button>
+      <button>
+        Stats
+      </button>
+      <button>
+        Previous
+      </button>
+    </div>
+
+    <form action="/action_page.php">
+      <label for="entry">Entry:</label>
+      <input type="text" id="entry" name="entry"><br><br>
+      <input type="submit" value="Submit">
+    </form>
   </div>
 </template>
 
