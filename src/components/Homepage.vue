@@ -9,17 +9,16 @@ defineProps({
 
 <template>
   <div class="greetings">
-    <h1 class="green">{{ msg }}</h1>
     <h1>
-      Prompts Website Holder
+      Placeholder Name
     </h1>
-    <button>
+    <button class="generate">
       Generate Prompt
     </button>
 
-    <p>Prompt: </p><p>Prompt goes here</p>
+    <h3>Prompt goes here</h3>
 
-    <div>
+    <div class="sideNav">
       <button>
         Sign In
       </button>
@@ -31,11 +30,11 @@ defineProps({
       </button>
     </div>
 
-    <p>Word Count: ??</p>
+    <p class="wc">Word Count: ??</p>
 
     <form action="/action_page.php">
       <label for="entry">Entry:</label>
-      <input type="text" id="entry" name="entry"><br><br>
+      <textarea id="entry" name="entry" rows="4" cols="50">Type your entry here...</textarea><br><br>
       <input type="submit" value="Submit">
     </form>
   </div>
@@ -45,12 +44,45 @@ defineProps({
 h1 {
   font-weight: 500;
   font-size: 2.6rem;
-  position: relative;
-  top: -10px;
+  position: absolute;
+  top: 15%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+button.generate {
+  font-size: 1.2rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1rem;
+  text-transform: uppercase;
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.sideNav {
+  font-weight: 500;
+  font-size: 1.4rem;
+  position: absolute;
+  top: 5%;
+  right: 5%;
+}
+
+input[type=text] {
+  width: 600px;
+  height: 150px;
+  padding: 5px 5px;
+  margin: 0 0;
+  box-sizing: border-box;
+  align: center;
 }
 
 .greetings h1,
