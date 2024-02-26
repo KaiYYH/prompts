@@ -1,99 +1,99 @@
-<script setup>
-defineProps({
-  msg: {
-    type: String,
-    required: true
-  }
-})
-</script>
-
 <template>
   <div class="greetings">
-    <h1>
-      Placeholder Name
-    </h1>
-    <button class="generate">
-      Generate Prompt
-    </button>
+    <div class="prompt-display">
+      <button class="generate">
+        Generate Prompt
+      </button>
 
-    <h3>Prompt goes here</h3>
-
-    <div class="sideNav">
-      <button>
-        Sign In
-      </button>
-      <button>
-        Stats
-      </button>
-      <button>
-        Previous
-      </button>
+      <h3>Prompt goes here</h3>
     </div>
 
-    <p class="wc">Word Count: ??</p>
+    <div class="write-here">
+      <div class="wc-plus-label">
+        <p class="label">Entry:</p>
+        <p class="wc">Word Count: ??</p>
+      </div>
 
-    <form action="/action_page.php">
-      <label for="entry">Entry:</label>
-      <textarea id="entry" name="entry" rows="4" cols="50">Type your entry here...</textarea><br><br>
-      <input type="submit" value="Submit">
-    </form>
+      <form action="/action_page.php">
+        <textarea id="entry" name="entry" rows="4" cols="50">Type your entry here...</textarea>
+        <input type="submit" value="Submit" id="entry-submit">
+      </form>
+    </div>
   </div>
 </template>
 
 <style scoped>
-h1 {
-  font-weight: 500;
-  font-size: 2.6rem;
-  position: absolute;
-  top: 15%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.greetings {
+  border: 2px solid #6fcfde;
+  align-items: center;
+  font-family: montserrat;
+}
+
+.prompt-display {
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  text-align: center;
+  margin-bottom: 20px;
 }
 
 button.generate {
-  font-size: 1.2rem;
+  font-size: 20px;
   text-transform: uppercase;
-  position: absolute;
-  top: 25%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  display: block;
+  margin: 0px auto 25px auto;
+  background-color: #6fcfde;
+  border: 2px solid;
+  color: black;
+  border-radius: 15px;
+  padding: 5px 15px 5px 15px;
+  cursor: pointer;
+}
+
+button.generate:hover {
+  background-color: #bef6ff;
 }
 
 h3 {
-  font-size: 1rem;
-  text-transform: uppercase;
-  position: absolute;
-  top: 30%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  font-size: 15px;
+  display: block;
+  color: #396c74;
 }
 
-.sideNav {
-  font-weight: 500;
-  font-size: 1.4rem;
-  position: absolute;
-  top: 5%;
-  right: 5%;
+.wc-plus-label{
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+  color: rgb(166, 163, 83);
 }
 
-input[type=text] {
-  width: 600px;
+.wc{
+  display: block;
+}
+
+#entry-submit {
+  float: right;
+  background-color: #6fcfde;
+  border: 1px solid;
+  color: black;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+#entry-submit:hover {
+  background-color: #bef6ff;
+}
+
+textarea {
+  width: 100%;
   height: 150px;
-  padding: 5px 5px;
-  margin: 0 0;
-  box-sizing: border-box;
-  align: center;
+  font-family: montserrat;
+  font-size: 14px;
+  color: #396c74;
 }
 
-.greetings h1,
-.greetings h3 {
-  text-align: center;
-}
-
-@media (min-width: 1024px) {
-  .greetings h1,
-  .greetings h3 {
-    text-align: left;
-  }
-}
 </style>
