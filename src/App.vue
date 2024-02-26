@@ -8,4 +8,7 @@
 </template>
 
 <style scoped>
+  #app {
+    border: 2px solid pink;
+  }
 </style>
